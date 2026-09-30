@@ -1,0 +1,25 @@
+Final Portfolio Project Testing and Debugging Report
+
+Integration:
+- Confirmed index.html links to styles.css in the head section.
+- Confirmed index.html links to script.js before the closing body tag.
+- Confirmed local SVG image files are referenced correctly in the project cards and lightbox buttons.
+
+Testing:
+- Tested navigation links for About Me, Projects, Skills, and Contact Me.
+- Tested the mobile menu button and verified that it opens and closes the navigation menu.
+- Tested project filter buttons for All, Web, Software, and Community categories.
+- Tested the lightbox image buttons and verified that the image modal opens and closes.
+- Tested contact form validation with empty fields, invalid email input, and complete valid input.
+- Tested responsive behavior at desktop and mobile screen widths.
+
+Debugging/Fixes:
+- Added DOMContentLoaded before running JavaScript so elements are available before event listeners are attached.
+- Added aria-expanded updates to the mobile menu button.
+- Added aria-hidden updates to the image modal.
+- Added error message areas for form validation feedback.
+- Used local SVG placeholder images to prevent broken image links.
+- Added console log messages to support debugging.
+
+Result:
+The completed project integrates HTML, CSS, and JavaScript successfully. The page is responsive, interactive, and ready for peer review.

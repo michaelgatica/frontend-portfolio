@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website for Michael Gatica showcasing front-end development projects, technical skills, and contact information.">
+    <title>Michael Gatica | Front-End Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Michael Gatica</h1>
+            <p>Front-End Development Student | Project Management | Digital Technology</p>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                ☰ Menu
+            </button>
+
+            <nav id="mainNav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="about-me" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <p>
+                I am learning front-end development and building skills in HTML, CSS, JavaScript,
+                accessibility, responsive design, and project organization. My goal is to create
+                useful websites that are clear, easy to navigate, and helpful for real users.
+            </p>
+            <p>
+                I also have experience with project planning, technology support, and communication,
+                which helps me think through both the technical side and the user experience side of a project.
+            </p>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+
+            <div class="filter-controls" aria-label="Project category filters">
+                <button type="button" class="filter-button active" data-filter="all">All</button>
+                <button type="button" class="filter-button" data-filter="web">Web</button>
+                <button type="button" class="filter-button" data-filter="software">Software</button>
+                <button type="button" class="filter-button" data-filter="community">Community</button>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card" data-category="software">
+                    <img src="library-project.svg" alt="Illustration of a library management system project">
+                    <h3>Library Management System</h3>
+                    <p>
+                        A C# console application that allows users to add, remove, search, borrow,
+                        and check in books while tracking checked-out status.
+                    </p>
+                    <button type="button" class="lightbox-button" data-image="library-project.svg" data-title="Library Management System">
+                        View Image
+                    </button>
+                </article>
+
+                <article class="project-card" data-category="web">
+                    <img src="portfolio-project.svg" alt="Illustration of a portfolio website project">
+                    <h3>Portfolio Website</h3>
+                    <p>
+                        A semantic HTML, CSS, and JavaScript website created to practice layout,
+                        navigation, filtering, form validation, and responsive design.
+                    </p>
+                    <button type="button" class="lightbox-button" data-image="portfolio-project.svg" data-title="Portfolio Website">
+                        View Image
+                    </button>
+                </article>
+
+                <article class="project-card" data-category="community">
+                    <img src="community-project.svg" alt="Illustration of a community technology project">
+                    <h3>Community Technology Page</h3>
+                    <p>
+                        A website concept for sharing organization information, events, resources,
+                        and contact details in an accessible format.
+                    </p>
+                    <button type="button" class="lightbox-button" data-image="community-project.svg" data-title="Community Technology Page">
+                        View Image
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
+            <ul>
+                <li>Semantic HTML structure</li>
+                <li>Responsive CSS design</li>
+                <li>JavaScript interactivity</li>
+                <li>Form validation</li>
+                <li>Accessibility and readable navigation</li>
+                <li>Project planning and debugging</li>
+            </ul>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Me</h2>
+            <p>Use this form to send a project question or message.</p>
+
+            <form id="contactForm" action="#" method="post" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" aria-describedby="nameError">
+                    <p class="error-message" id="nameError"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" aria-describedby="emailError">
+                    <p class="error-message" id="emailError"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" aria-describedby="messageError"></textarea>
+                    <p class="error-message" id="messageError"></p>
+                </div>
+
+                <button type="submit">Send Message</button>
+                <p id="formStatus" class="form-status" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <div class="modal" id="imageModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <button type="button" class="modal-close" id="closeModal" aria-label="Close image preview">&times;</button>
+            <h2 id="modalTitle">Project Image</h2>
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Michael Gatica. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
